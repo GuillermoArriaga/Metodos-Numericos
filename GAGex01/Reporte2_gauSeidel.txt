@@ -1,0 +1,43 @@
+Reporte de Gauss Seidel
+
+En la imagen "Reporte_GaussSeidel.png"
+hay más resultados, aquí algunos interesantes.
+También están en la corrida del programa.
+
+
+Error de cercano a 10^(-3)
+
+Gama=0.50 en 30 iteraciones
+Gama=0.75 en 15 iteraciones
+Gama=1.00 en 15 iteraciones
+
+
+
+Error de cercano a 10^(-5)
+
+Gama=0.50 en 165 iteraciones
+Gama=0.75 en 45  iteraciones
+Gama=1.00 en 30  iteraciones
+
+
+
+Error de cercano a 10^(-8)
+
+Gama=0.50 en 345 iteraciones
+Gama=0.75 en 90  iteraciones
+Gama=1.00 en 45  iteraciones
+
+
+
+Si se quieren ver los vectores solucion
+hay que activar lo comentado en la
+funcion GaussSeidel de Matriz.cpp
+
+
+
+ if(it%15==0){
+         cout<<"\n Gauss Seidel en iteracion "<<it<<" con error |Ax-B|(1) = "<<(A*X2-B).norma1();
+         //cout<<"   Tiene el siguiente vector de resultados:";
+         //X2.imprimir();
+         // Por si se quiere ver el vector de resultado
+      }

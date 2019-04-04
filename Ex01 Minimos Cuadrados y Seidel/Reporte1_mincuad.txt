@@ -1,0 +1,26 @@
+
+Abrir la imagen "Reporte_mincuad.png" en ella está la corrida
+o ver correr l programa.
+
+*Para 20 datos
+
+Cuando aparece Matriz X da los valores de los coeficientes
+a0
+a1
+a2
+
+Sigue el error de la aprox. del sistema de ecuaciones normales
+Luego el error de la estimacion de los y's. Con norma 1.
+
+La evaluación del polinomio ajustado en x1 y xm.
+
+* Esto se repite para 40 y 80 datos.
+
+*** Se aprecia que los coeficientes sí cambian con el num de datos
+*** También mejora el ajuste aunque no mucho, 
+*** la evaluación en los puntos 1 y m sí cambia significativamente.
+
+
+* Después de esto se imprimen los coeficientes para cada cantidad de datos
+  y se hacen restas entre ellos para ver las variaciones, que son menores a 0.1
+
