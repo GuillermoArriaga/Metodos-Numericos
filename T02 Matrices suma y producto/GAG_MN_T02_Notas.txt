@@ -1,0 +1,27 @@
+GAG Met Num Tarea 02
+
+
+PRELIMINARES:
+*************
+
+El archivo funciona recibiendo
+un entero como la dimension de
+las matrices cuadradas.
+
+Si sólo se invoca el programa,
+tiene por default un valor de
+4. De cualquier modo, la 
+inicializacion de las matrices
+es fija.
+
+
+OBJETIVO:
+*********
+Sumar y multiplicar dos matrices
+cuadradas de modo ilustrativo.
+
+
+UTILIDADES:
+***********
+Tiene una funcion óptima de creacion
+ y liberacion de una matriz.

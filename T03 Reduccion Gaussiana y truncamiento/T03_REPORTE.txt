@@ -1,0 +1,23 @@
+
+Guillermo Arriaga Garcia
+
+Tarea 3 Reduccion gaussiana 
+sin y con truncamiento de datos a dos digitos
+
+* Error=|Ax-B| con la norma 1.
+* Corrida: Main Mat1.txt Vec1.txt
+  con 1,2,3,4.
+
+REPORTE DE ERRORES:
+1) Sin trunc: 3.55271 e-015 , con trunc: 25 !!!
+2) Sin trunc: 1.93445 e-012 , con trunc: 5.07623 !!!
+3) Sin trunc: 1.38778 e-017 , con trunc: NO FUE POSIBLE LA REDUCCION GAUSSIANA, NO HUBO UN PIVOTE !!!
+4) Sin trunc: 8.88178 e-016 , con trunc: 8.88178 e-016
+
+Obs.: 
+
+En el 4) el error fue el mismo con truncamiento y si él
+En el 3) no hubo pivote en datos truncados
+En 1) y 2) los errores fueron intolerables al truncar.
+
+Así que la precision de la máquina tiene un papel importante en los métodos numéricos.

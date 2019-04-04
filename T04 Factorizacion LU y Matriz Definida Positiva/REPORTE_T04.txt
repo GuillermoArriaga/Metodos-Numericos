@@ -1,0 +1,48 @@
+Guillermo Arriaga Garcia
+Met Num 2013 Demat Cimat
+
+Tarea 04 Factorizacion LU
+
+Ejecutables segun el formato de entrada:
+ 1) MainBIN.exe
+ 2) MainTXT.exe
+
+Ejecución: MainBIN matA2.bin vecb2.bin
+
+Corrida:
+ * Imprimir en pantalla las matrices LU, L y U.
+ * Imprime el error |Ax-B| con la norma 1: suma de abs.
+
+** Para la corrida de la matriz de 800 ecuaciones se
+   pueden omitir las impresiones a pantalla de las matrices
+   LU,L,U comentandolas en el main
+   y la impresion de la matriz y el vector capturado
+   en la funcion "desde" que esta en Matriz.cpp
+
+
+
+********************************
+REPORTE DE ERRORES para BINARIOS
+
+   Error[i]=|matA[i]*x-vecb[i]|
+
+Error[1] = 0                   5 ecuaciones
+Error[2] = 2.4869  e-014      10 ec.
+Error[3] = 1.4599  e-014      20 ec.
+Error[4] = 1.69304 e-012     100 ec.
+Error[5] = 1.57627 e-009     800 ec.
+
+********************************
+REPORTE DE ERRORES para TXT
+
+   Error[i]=|matA[i]*x-vecb[i]|
+
+Error[1] = 0                   5 ecuaciones
+Error[2] = 3.90799 e-014      10 ec.
+Error[3] = 1.55431 e-014      20 ec.
+Error[4] = 1.59869 e-012     100 ec.
+Error[5] = 5.14349 e-009     800 ec.
+
+********************************
+Conclusion
+El error si ha sido comunmente mayor en txt ya que tiene menos precision que bin
