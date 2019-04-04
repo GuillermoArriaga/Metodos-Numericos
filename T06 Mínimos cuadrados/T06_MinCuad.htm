@@ -1,0 +1,169 @@
+<html xmlns:mml>
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<!-- The next lines of text are copied from the file htmlout.cfg, and can be modified there -->
+<style type="text/css">
+.displayed {text-align: center}
+.displayed { display: block !
+important}
+.displayedmathml {margin-top: 5px; margin-bottom: 5px; font-style: normal; font-family: Times New Roman; font-size: 100%}
+span.leadin {float: left}
+span.vspace {vertical-align: top}
+span.rule {display: inline; background-color: black}
+span.inline-math-graphics {white-space: nowrap}
+hr.pagebreak {color: green}
+table {border-collapse: collapse; border-color: black}
+table td {border-color: black}
+.inlinemathml {font-family: Times New Roman; font-style: normal; font-size: 100%}
+.inlineTable {display: inline}
+</style>
+<!-- End of lines from htmlout.cfg -->
+
+<link href="T06_MinCuad.css" rel="stylesheet" type="text/css"/>
+<meta name="CREATED" content="Saturday, September 28, 2013 19:59:42"/>
+<meta name="REVISED" content="Saturday, September 28, 2013 21:54:23"/>
+<meta name="GENERATOR" content="Scientific Word"/>
+<title>T06_MinCuad.htm</title>
+</head>
+<body >
+<p>
+   <strong>Guillermo Arriaga Garc&#xed;a</strong>
+</p>
+<p>
+   <strong>M&#xe9;todos Num&#xe9;ricos  2013</strong><br/><br/><br/>
+</p>
+<p>
+   
+<!-- MSISEMCOM \FRAME{ftbpF}{7.1425in}{8.0479in}{0pt}{}{}{Figure}{\special{ language "Scientific Word";  type "GRAPHIC";  display "USEDEF";  valid_file "T";  width 7.1425in;  height 8.0479in;  depth 0pt;  original-width 7.4374in;  original-height 8.3748in;  cropleft "0";  croptop "1";  cropright "1";  cropbottom "0";  temp_alias "4";  tempfile-properties "XPR"; }} -->
+   <br/><span class="displayed"><img src="graphics/T06_MinCuad__1.png" alt="Figure" /></span><br/>
+<!-- MSISEMCOM ENDFRAME -->
+</p>
+<p>
+   Primero veamos el escalar de
+   g<span class="inline-math-graphics"><img width="10px" height="25px" src="graphics/T06_MinCuad__2.png" alt="$^{\text{T}}$" style="vertical-align:-3px"/></span>Dg
+   con
+   g=[x,y,z]<span class="inline-math-graphics"><img width="10px" height="25px" src="graphics/T06_MinCuad__3.png" alt="$^{\text{T}}$" style="vertical-align:-3px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="483px" height="89px" src="graphics/T06_MinCuad__4.png" alt="MATH" style="vertical-align:-38px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="425px" height="24px" src="graphics/T06_MinCuad__5.png" alt="MATH" style="vertical-align:-4px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="308px" height="24px" src="graphics/T06_MinCuad__6.png" alt="MATH" style="vertical-align:-4px"/></span>
+</p>
+<p>
+   <br/><br/><br/>
+</p>
+<p>
+   As&#xed;, para i=1,...,6. se tiene que
+   g<span class="inline-math-graphics"><img width="10px" height="36px" src="graphics/T06_MinCuad__7.png" alt="MATH" style="vertical-align:-10px"/></span>Dg<span class="inline-math-graphics"><img width="347px" height="28px" src="graphics/T06_MinCuad__8.png" alt="MATH" style="vertical-align:-8px"/></span>
+</p>
+<p>
+   Adem&#xe1;s, tenemos para esos valores de i que
+   <span class="inline-math-graphics"><img width="98px" height="31px" src="graphics/T06_MinCuad__9.png" alt="MATH" style="vertical-align:-10px"/></span>g<span class="inline-math-graphics"><img width="10px" height="36px" src="graphics/T06_MinCuad__10.png" alt="MATH" style="vertical-align:-10px"/></span>Dg<span class="inline-math-graphics"><img width="56px" height="28px" src="graphics/T06_MinCuad__11.png" alt="$_{\text{i}}+error$" style="vertical-align:-8px"/></span>
+   un error que puede no ser cero por el redondeo de los datos con que se cuenta
+   y porque se dar&#xed;a una D fija para las eis ecuaciones.
+</p>
+<p>
+   <br/><br/><br/>
+</p>
+<p>
+   Se buscan las entradas de D que minimicen el error cuadr&#xe1;tico de las seis
+   ecuaciones:
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="556px" height="35px" src="graphics/T06_MinCuad__12.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   que es nuestra <strong>funci&#xf3;n a minimizar</strong> (<strong>a)</strong>.
+</p>
+<p>
+   <br/><br/><br/>
+</p>
+<p>
+   Las ecuaciones normales ser&#xe1;n las siguientes:
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span>Sea g una
+   funcion tal que
+   <span class="inline-math-graphics"><img width="243px" height="28px" src="graphics/T06_MinCuad__13.png" alt="MATH" style="vertical-align:-7px"/></span>
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span><span class="inline-math-graphics"><img width="172px" height="31px" src="graphics/T06_MinCuad__14.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span><span class="inline-math-graphics"><img width="171px" height="31px" src="graphics/T06_MinCuad__15.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span><span class="inline-math-graphics"><img width="170px" height="31px" src="graphics/T06_MinCuad__16.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span><span class="inline-math-graphics"><img width="181px" height="31px" src="graphics/T06_MinCuad__17.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span><span class="inline-math-graphics"><img width="180px" height="31px" src="graphics/T06_MinCuad__18.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   <span style="width:2em"><span style="padding-left:2em"></span></span><span class="inline-math-graphics"><img width="179px" height="31px" src="graphics/T06_MinCuad__19.png" alt="MATH" style="vertical-align:-10px"/></span>
+</p>
+<p>
+   Concediendo que
+   <span class="inline-math-graphics"><img width="74px" height="28px" src="graphics/T06_MinCuad__20.png" alt="MATH" style="vertical-align:-7px"/></span>
+   ,
+</p>
+<p>
+   que
+   <span class="inline-math-graphics"><img width="95px" height="31px" src="graphics/T06_MinCuad__21.png" alt="MATH" style="vertical-align:-10px"/></span>
+   ,
+</p>
+<p>
+   quitando las constantes   2 , 4
+</p>
+<p>
+   realizando los productos y luego las sumas,
+</p>
+<p>
+   nos quedan nuestras seis ecuaciones
+   normales:<span class="inline-math-graphics"><img width="0px" height="0px" src="" alt="$\bigskip $" style="vertical-align:0px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="570px" height="25px" src="graphics/T06_MinCuad__23.png" alt="MATH" style="vertical-align:-5px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="566px" height="25px" src="graphics/T06_MinCuad__24.png" alt="MATH" style="vertical-align:-5px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="562px" height="25px" src="graphics/T06_MinCuad__25.png" alt="MATH" style="vertical-align:-5px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="612px" height="25px" src="graphics/T06_MinCuad__26.png" alt="MATH" style="vertical-align:-5px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="608px" height="25px" src="graphics/T06_MinCuad__27.png" alt="MATH" style="vertical-align:-5px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="604px" height="25px" src="graphics/T06_MinCuad__28.png" alt="MATH" style="vertical-align:-5px"/></span>
+</p>
+<p>
+   <br/><br/><br/>
+</p>
+<p>
+   Por lo que el <strong>sistema normal AX=B</strong> es <strong>(b)</strong>:
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="497px" height="175px" src="graphics/T06_MinCuad__29.png" alt="MATH" style="vertical-align:-81px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="0px" height="0px" src="" alt="$\bigskip $" style="vertical-align:0px"/></span>
+</p>
+<p>
+   <span class="inline-math-graphics"><img width="91px" height="169px" src="graphics/T06_MinCuad__31.png" alt="MATH" style="vertical-align:-78px"/></span>
+   <span class="inline-math-graphics"><img width="209px" height="203px" src="graphics/T06_MinCuad__32.png" alt="MATH" style="vertical-align:-95px"/></span>
+   <span class="inline-math-graphics"><img width="74px" height="28px" src="graphics/T06_MinCuad__33.png" alt="MATH" style="vertical-align:-7px"/></span>
+</p>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Saturday, September 28, 2013 19:59:42}
+%TCIDATA{LastRevised=Saturday, September 28, 2013 21:54:23}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+%TCIDATA{PageSetup=36,36,72,72,0}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\textbf{Guillermo Arriaga Garc\'{\i}a}
+
+\textbf{M\'{e}todos Num\'{e}ricos \ 2013}\bigskip 
+
+\FRAME{ftbpF}{7.5282in}{8.4821in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+7.5282in;height 8.4821in;depth 0pt;original-width 7.4374in;original-height
+8.3748in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'MTV4BT00.wmf';tempfile-properties "XPR";}}
+
+Primero veamos el escalar de \ g$^{\text{T}}$Dg \ con g=[x,y,z]$^{\text{T}}$
+
+$\left[ 
+\begin{array}{ccc}
+x & y & z%
+\end{array}%
+\right] \left[ 
+\begin{array}{ccc}
+d_{1} & d_{4} & d_{5} \\ 
+d_{4} & d_{2} & d_{6} \\ 
+d_{5} & d_{6} & d_{3}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+x \\ 
+y \\ 
+z%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+x & y & z%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+xd_{1}+yd_{4}+zd_{5} \\ 
+xd_{4}+yd_{2}+zd_{6} \\ 
+xd_{5}+yd_{6}+zd_{3}%
+\end{array}%
+\right] $
+
+$%
+=x^{2}d_{1}+xyd_{4}+xzd_{5}+xyd_{4}+y^{2}d_{2}+yzd_{6}+xzd_{5}+yzd_{6}+z^{2}d_{3}
+$
+
+$=x^{2}d_{1}+y^{2}d_{2}+z^{2}d_{3}+2xyd_{4}+2xzd_{5}+2yzd_{6}$
+
+\bigskip 
+
+As\'{\i}, para i=1,...,6. se tiene que \ \ g$_{\text{i}}^{\text{T}}$Dg$_{%
+\text{i}%
+}=x_{i}^{2}d_{1}+y_{i}^{2}d_{2}+z_{i}^{2}d_{3}+2x_{i}y_{i}d_{4}+2x_{i}z_{i}d_{5}+2y_{i}z_{i}d_{6}
+$
+
+Adem\'{a}s, tenemos para esos valores de i que \ \  $0=\frac{1}{b}\ln (\frac{%
+S_{i}}{S_{0}})+$g$_{\text{i}}^{\text{T}}$Dg$_{\text{i}}+error$ \ \ \ un
+error que puede no ser cero por el redondeo de los datos con que se cuenta y
+porque se dar\'{\i}a una D fija para las eis ecuaciones.
+
+\bigskip 
+
+Se buscan las entradas de D que minimicen el error cuadr\'{a}tico de las
+seis ecuaciones:
+
+$\sum_{i=1}^{6}\left( \frac{1}{b}\ln (\frac{S_{i}}{S_{0}}%
+)+x_{i}^{2}d_{1}+y_{i}^{2}d_{2}+z_{i}^{2}d_{3}+2x_{i}y_{i}d_{4}+2x_{i}z_{i}d_{5}+2y_{i}z_{i}d_{6}\right) ^{2}=:f(d_{1},...,d_{6})
+$
+
+que es nuestra \textbf{funci\'{o}n a minimizar} (\textbf{a)}.
+
+\bigskip 
+
+Las ecuaciones normales ser\'{a}n las siguientes:
+
+\qquad Sea g una funcion tal que $f(d_{1},...,d_{6})=\sum_{i=1}^{6}\left(
+g(d_{1},...,d_{6})\right) ^{2}.$
+
+\qquad $\frac{\partial }{\partial d_{1}}f=\sum_{i=1}^{6}2\left( g\right)
+(x_{i}^{2})=0$
+
+\qquad $\frac{\partial }{\partial d_{2}}f=\sum_{i=1}^{6}2\left( g\right)
+(y_{i}^{2})=0$
+
+\qquad $\frac{\partial }{\partial d_{3}}f=\sum_{i=1}^{6}2\left( g\right)
+(z_{i}^{2})=0$
+
+\qquad $\frac{\partial }{\partial d_{4}}f=\sum_{i=1}^{6}4\left( g\right)
+(x_{i}y_{i})=0$
+
+\qquad $\frac{\partial }{\partial d_{5}}f=\sum_{i=1}^{6}4\left( g\right)
+(x_{i}z_{i})=0$
+
+\qquad $\frac{\partial }{\partial d_{6}}f=\sum_{i=1}^{6}4\left( g\right)
+(y_{i}z_{i})=0$
+
+Concediendo que $\sum =\sum_{i=1}^{6}$ , 
+
+que $a_{i}=\frac{-1}{b}\ln (\frac{S_{i}}{S_{0}})$ , 
+
+quitando las constantes \ \ 2 , 4 
+
+realizando los productos y luego las sumas, 
+
+nos quedan nuestras seis ecuaciones normales:$\bigskip $
+
+$\sum x_{i}^{2}a_{i}=d_{1}\sum x_{i}^{4}+d_{2}\sum
+x_{i}^{2}y_{i}^{2}+d_{3}\sum x_{i}^{2}z_{i}^{2}+d_{4}\sum
+2x_{i}^{3}y_{i}+d_{5}\sum 2x_{i}^{3}z_{i}+d_{6}\sum 2x_{i}^{2}y_{i}z_{i}$
+
+$\sum y_{i}^{2}a_{i}=d_{1}\sum x_{i}^{2}y_{i}^{2}+d_{2}\sum
+y_{i}^{4}+d_{3}\sum y_{i}^{2}z_{i}^{2}+d_{4}\sum 2x_{i}y_{i}^{3}+d_{5}\sum
+2x_{i}y_{i}^{2}z_{i}+d_{6}\sum 2y_{i}^{3}z_{i}$
+
+$\sum z_{i}^{2}a_{i}=d_{1}\sum x_{i}^{2}z_{i}^{2}+d_{2}\sum
+y_{i}^{2}z_{i}^{2}+d_{3}\sum z_{i}^{4}+d_{4}\sum
+2x_{i}y_{i}z_{i}^{2}+d_{5}\sum 2x_{i}z_{i}^{3}+d_{6}\sum 2y_{i}z_{i}^{3}$
+
+$\sum x_{i}y_{i}a_{i}=d_{1}\sum x_{i}^{3}y_{i}+d_{2}\sum
+x_{i}y_{i}^{3}+d_{3}\sum x_{i}y_{i}z_{i}^{2}+d_{4}\sum
+2x_{i}^{2}y_{i}^{2}+d_{5}\sum 2x_{i}^{2}y_{i}z_{i}+d_{6}\sum
+2x_{i}y_{i}^{2}z_{i}$
+
+$\sum x_{i}z_{i}a_{i}=d_{1}\sum x_{i}^{3}z_{i}+d_{2}\sum
+x_{i}y_{i}^{2}z_{i}+d_{3}\sum x_{i}z_{i}^{3}+d_{4}\sum
+2x_{i}^{2}y_{i}z_{i}+d_{5}\sum 2x_{i}^{2}z_{i}^{2}+d_{6}\sum
+2x_{i}y_{i}z_{i}^{2}$
+
+$\sum y_{i}z_{i}a_{i}=d_{1}\sum x_{i}^{2}y_{i}z_{i}+d_{2}\sum
+y_{i}^{3}z_{i}+d_{3}\sum y_{i}z_{i}^{3}+d_{4}\sum
+2x_{i}y_{i}^{2}z_{i}+d_{5}\sum 2x_{i}y_{i}z_{i}^{2}+d_{6}\sum
+2y_{i}^{2}z_{i}^{2}$
+
+\bigskip 
+
+Por lo que el \textbf{sistema normal AX=B} es \textbf{(b)}:
+
+$A=\left[ 
+\begin{array}{cccccc}
+\sum x_{i}^{4} & \sum x_{i}^{2}y_{i}^{2} & \sum x_{i}^{2}z_{i}^{2} & \sum
+2x_{i}^{3}y_{i} & \sum 2x_{i}^{3}z_{i} & \sum 2x_{i}^{2}y_{i}z_{i} \\ 
+\sum x_{i}^{2}y_{i}^{2} & \sum y_{i}^{4} & \sum y_{i}^{2}z_{i}^{2} & \sum
+2x_{i}y_{i}^{3} & \sum 2x_{i}y_{i}^{2}z_{i} & \sum 2y_{i}^{3}z_{i} \\ 
+\sum x_{i}^{2}z_{i}^{2} & \sum y_{i}^{2}z_{i}^{2} & \sum z_{i}^{4} & \sum
+2x_{i}y_{i}z_{i}^{2} & \sum 2x_{i}z_{i}^{3} & \sum 2y_{i}z_{i}^{3} \\ 
+\sum x_{i}^{3}y_{i} & \sum x_{i}y_{i}^{3} & \sum x_{i}y_{i}z_{i}^{2} & \sum
+2x_{i}^{2}y_{i}^{2} & \sum 2x_{i}^{2}y_{i}z_{i} & \sum 2x_{i}y_{i}^{2}z_{i}
+\\ 
+\sum x_{i}^{3}z_{i} & \sum x_{i}y_{i}^{2}z_{i} & \sum x_{i}z_{i}^{3} & \sum
+2x_{i}^{2}y_{i}z_{i} & \sum 2x_{i}^{2}z_{i}^{2} & \sum 2x_{i}y_{i}z_{i}^{2}
+\\ 
+\sum x_{i}^{2}y_{i}z_{i} & \sum y_{i}^{3}z_{i} & \sum y_{i}z_{i}^{3} & \sum
+2x_{i}y_{i}^{2}z_{i} & \sum 2x_{i}y_{i}z_{i}^{2} & \sum 2y_{i}^{2}z_{i}^{2}%
+\end{array}%
+\right] $
+
+$\bigskip $
+
+$X=\left[ 
+\begin{array}{c}
+d_{1} \\ 
+d_{2} \\ 
+d_{3} \\ 
+d_{4} \\ 
+d_{5} \\ 
+d_{6}%
+\end{array}%
+\right] $ $\ \ \ \ \ \ \ \ B=\left[ 
+\begin{array}{c}
+\sum \frac{-1}{b}x_{i}^{2}\ln (\frac{S_{i}}{S_{0}}) \\ 
+\sum \frac{-1}{b}y_{i}^{2}\ln (\frac{S_{i}}{S_{0}}) \\ 
+\sum \frac{-1}{b}z_{i}^{2}\ln (\frac{S_{i}}{S_{0}}) \\ 
+\sum \frac{-1}{b}x_{i}y_{i}\ln (\frac{S_{i}}{S_{0}}) \\ 
+\sum \frac{-1}{b}x_{i}z_{i}\ln (\frac{S_{i}}{S_{0}}) \\ 
+\sum \frac{-1}{b}y_{i}z_{i}\ln (\frac{S_{i}}{S_{0}})%
+\end{array}%
+\right] $ \ \ \ \ \ \ \ \ $\sum =\sum_{i=1}^{6}$
+
+\end{document}

@@ -1,0 +1,30 @@
+
+El resultado de comparar las imagenes es:
+
+Imagen reducida a n vetores dista de la original en promedio por pixel:
+
+n     dista de original...
+5     20
+15    12
+25    10
+50    9
+      ... distancia promedio de pixel en grises.
+
+Asi que se tiene una razon de reduccion m/n:
+
+m     m/n    variacion promedio  variacion % 
+             de valor de pixel   x/255
+5     0.97%  20                  7.8%                
+15    2.92%  12                  4.7%
+25    4.88%  10                  3.9%
+50    9.76%  9                   3.5%
+
+Por lo que la variacion es poca con 50 vectores,
+es similar a esta con 25 por lo que conviene mucho
+el de 25 vectores.
+
+
+
+
+
+

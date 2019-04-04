@@ -1,0 +1,53 @@
+Código para scilab
+
+
+
+clf
+I = fscanfMat('C:\Users\Public\Documents\y Escuela\Metodos Numericos\Tareas\T08 SVD PCA\imagen.txt');
+I = round(I); // valores enteros
+I = I - min(I); // valores no negativos
+Ncolors= max(I)+1; // numero de niveles de gris
+RGB=graycolormap(Ncolors+1); // colormap gris
+LUT=addcolor(RGB); // resampleo de niveles de gris
+Matplot(matrix(LUT(I+1),size(I))); // Despliega la matriz
+
+
+clf
+I = fscanfMat('C:\Users\Public\Documents\y Escuela\Metodos Numericos\Tareas\T08 SVD PCA\imred_5.txt');
+I = round(I); // valores enteros
+I = I - min(I); // valores no negativos
+Ncolors= max(I)+1; // numero de niveles de gris
+RGB=graycolormap(Ncolors+1); // colormap gris
+LUT=addcolor(RGB); // resampleo de niveles de gris
+Matplot(matrix(LUT(I+1),size(I))); // Despliega la matriz
+
+
+clf
+I = fscanfMat('C:\Users\Public\Documents\y Escuela\Metodos Numericos\Tareas\T08 SVD PCA\imred_15.txt');
+I = round(I); // valores enteros
+I = I - min(I); // valores no negativos
+Ncolors= max(I)+1; // numero de niveles de gris
+RGB=graycolormap(Ncolors+1); // colormap gris
+LUT=addcolor(RGB); // resampleo de niveles de gris
+Matplot(matrix(LUT(I+1),size(I))); // Despliega la matriz
+
+
+
+clf
+I = fscanfMat('C:\Users\Public\Documents\y Escuela\Metodos Numericos\Tareas\T08 SVD PCA\imred_25.txt');
+I = round(I); // valores enteros
+I = I - min(I); // valores no negativos
+Ncolors= max(I)+1; // numero de niveles de gris
+RGB=graycolormap(Ncolors+1); // colormap gris
+LUT=addcolor(RGB); // resampleo de niveles de gris
+Matplot(matrix(LUT(I+1),size(I))); // Despliega la matriz
+
+
+clf
+I = fscanfMat('C:\Users\Public\Documents\y Escuela\Metodos Numericos\Tareas\T08 SVD PCA\imred_50.txt');
+I = round(I); // valores enteros
+I = I - min(I); // valores no negativos
+Ncolors= max(I)+1; // numero de niveles de gris
+RGB=graycolormap(Ncolors+1); // colormap gris
+LUT=addcolor(RGB); // resampleo de niveles de gris
+Matplot(matrix(LUT(I+1),size(I))); // Despliega la matriz

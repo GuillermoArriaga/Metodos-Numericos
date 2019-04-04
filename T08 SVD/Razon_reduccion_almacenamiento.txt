@@ -1,0 +1,27 @@
+
+La razon de ahorro en almacenamiento 
+   para una imagen-matriz n*n es m/n pues:
+
+
+
+Si la reduccion es m entre [1,n], entonces:
+
+   A[n*n]=U[n*m]S[m*m]V[n*m].transpuesta
+
+   Antes se guardaban dos matrices n*n
+      y la diagonal de n elementos.
+
+   Ahora se guardan solo dos matrices n*m
+      y la diagonal de m elementos.
+
+Por lo que tenemos:
+
+   Antes: 2*n*n+n = n*(2n+1) celdas a guardar.
+   Ahora: 2*n*m+m = m*(2n+1) celdas a guardar.
+
+   Ahora / Antes = m*(2n+1) / n*(2n+1) = m/n
+
+
+Esto es que la razon de reduccion de almacenamiento 
+   es m/n, siendo m la cantidad reducida de 
+   eigenvectores principales.
